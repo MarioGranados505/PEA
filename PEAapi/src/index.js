@@ -7,6 +7,9 @@ const app = express()
 app.use(express.json())
 
 app.use('/api', usuarios)
+//app.use('/api', usuarios)
+//app.use('/api', usuarios)
+//app.use('/api', usuarios)
 
 app.listen(3000)
 console.log('server corriendo y escribiendo')
