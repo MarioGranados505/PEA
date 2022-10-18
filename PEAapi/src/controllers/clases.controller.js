@@ -6,10 +6,8 @@ export const getClases = async (req, res) => {
     res.json(rows)
 }
 
-/*
-
 export const getClase = async (req, res) => {
-    const [rows] = await pool.query('Select * FROM clases WHERE IdRegistro = ?', [req.params.id])
+    const [rows] = await pool.query('Select * FROM clases WHERE IdClases = ?', [req.params.id])
 
     if (rows.length <= 0) return res.status(404).json({
         message: 'Valor no encontrado'
@@ -18,15 +16,15 @@ export const getClase = async (req, res) => {
     res.json(rows[0])
 }
 
-export const createUsuario = async(req, res) => {
+export const createClase = async(req, res) => {
     const {IdClase, IdUser, Alta, NombreClase, DescClase} = req.body
-    const [rows] = await pool.query('INSERT INTO clases () VALUES (?, ?, ?, ?, ?)',[, , , ,])
+    const [rows] = await pool.query('INSERT INTO clases () VALUES (IdClase, IdUser, Alta, NombreClase, DescClase)VALUES (?, ?, ?, ?, ?)',[IdClase, IdUser, Alta, NombreClase, DescClase])
     res.send({ rows })
 }
 
-export const deleteUsuario = async (req, res) => {
+export const deleteClase = async (req, res) => {
 
-    const [result] = await pool.query('DELETE FROM usuarios where IdUsuario = ?', [req.params.id])
+    const [result] = await pool.query('DELETE FROM clases where IdClase = ?', [req.params.id])
 
     if(result.affectedRows <= 0) return res.status(404).json({
         message: 'Valor no entontrado'
@@ -35,21 +33,20 @@ export const deleteUsuario = async (req, res) => {
     res.send('Valor eliminado')
 }
 
-export const updateUsuario = async (req, res) => {
+export const updateClase = async (req, res) => {
     const{ id } = req.params
-    const{ Nombre, Apellido, Correo, Password} = req.body
+    const{ IdUser, Alta, NombreClase, DescClase} = req.body
     
     const [result] = await pool.query(
-        'UPDATE usuarios SET Nombre = IFNULL(?, Nombre), Apellido = IFNULL(?, Apellido), Correo = IFNULL(?, Correo), Password = IFNULL(?, Password) Where IdUsuario = ?',[Nombre, Apellido, Correo, Password, id]
+        'UPDATE clase SET IdUser = IFNULL(?, IdUser), Alta = IFNULL(?, Alta), NombreClase = IFNULL(?, NombreClase), DescClase = IFNULL(?, DescClase) Where IdClase = ?',[IdUser, Alta, NombreClase, DescClase, id]
     )
 
     if(result.affectedRows === 0) return res.status(404).json({
         message: 'Valor no encontrado'
     })
 
-    const [rows] = await pool.query('SELECT * FROM Usuarios WHERE IdUsuario = ?', [id])
+    const [rows] = await pool.query('SELECT * FROM clases WHERE IdClase = ?', [id])
 
     res.json(rows[0])
 }
 
-*/

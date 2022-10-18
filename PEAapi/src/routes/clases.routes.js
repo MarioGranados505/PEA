@@ -1,16 +1,16 @@
 import { Router } from "express";
-import {getClases} from '../controllers/clases.controller.js'
+import {getClases, createClase, updateClase, deleteClase, getClase} from '../controllers/clases.controller.js'
 
 const router = Router()
 
 router.get('/clases', getClases)
-/*
-router.get('/usuarios/:id', getUsuario)
 
-router.post('/usuarios', createUsuario)
+router.get('/clases/:id', getClase)
 
-router.patch('/usuarios/:id', updateUsuario)
+router.post('/clases', createClase)
 
-router.delete('/usuarios/:id', deleteUsuario)
-*/
+router.patch('/clases/:id', updateClase)
+
+router.delete('/clases/:id', deleteClase)
+
 export default router
