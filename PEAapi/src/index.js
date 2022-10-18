@@ -13,7 +13,7 @@ app.use(express.json())
 app.use('/api', usuarios)
 app.use('/api', clases)
 app.use('/api', materialclase)
-//app.use('/api', clasesusuario)
+app.use('/api', clasesusuario)
 
 
 app.listen(3000)
