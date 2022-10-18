@@ -3,7 +3,7 @@ import {pool} from './db.js'
 import usuarios from  './routes/usuarios.routes.js'
 import clases from  './routes/clases.routes.js'
 import materialclase from  './routes/materialclase.routes.js'
-//import clasesusuario from  './routes/clasesusuarios.routes.js'
+import clasesusuario from  './routes/clasesusuarios.routes.js'
 
 
 const app = express()
