@@ -18,7 +18,7 @@ export const getClasesusuario = async (req, res) => {
 
 export const createClasesusario = async(req, res) => {
     const {IdRegistro, IdClase, IdUsuario} = req.body
-    const [rows] = await pool.query('INSERT INTO clasesusuarios (IdRegistro, IdClase, IdUsuario) VALUES (IdRegistro, IdClase, IdUsuario) VALUES (?, ?, ?)',[IdRegistro, IdClase, IdUsuario])
+    const [rows] = await pool.query('INSERT INTO clasesusuarios (IdRegistro, IdClase, IdUsuario) VALUES (?, ?, ?)',[IdRegistro, IdClase, IdUsuario])
     res.send({ rows })
 }
 
@@ -38,7 +38,7 @@ export const updateClaseusuario = async (req, res) => {
     const{ IdClase, IdUsuario} = req.body
     
     const [result] = await pool.query(
-        'UPDATE clasesusuarios SET IdClase = IFNULL(?, IdUser), IdUsuario = IFNULL(?, IdUsuario) Where IdRegistro = ?',[IdClase ,IdUsuario, id]
+        'UPDATE clasesusuarios SET IdClase = IFNULL(?, IdClase), IdUsuario = IFNULL(?, IdUsuario) Where IdRegistro = ?',[IdClase ,IdUsuario, id]
     )
 
     if(result.affectedRows === 0) return res.status(404).json({

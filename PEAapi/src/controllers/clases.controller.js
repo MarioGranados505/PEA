@@ -17,14 +17,14 @@ export const getClase = async (req, res) => {
 }
 
 export const createClase = async(req, res) => {
-    const {IdClase, IdUser, Alta, NombreClase, DescClase} = req.body
-    const [rows] = await pool.query('INSERT INTO clases () VALUES (IdClase, IdUser, Alta, NombreClase, DescClase)VALUES (?, ?, ?, ?, ?)',[IdClase, IdUser, Alta, NombreClase, DescClase])
+    const {IdClases, IdUser, Alta, NombreClase, DescClase} = req.body
+    const [rows] = await pool.query('INSERT INTO clases (IdClases, IdUser, Alta, NombreClase, DescClase) VALUES (?, ?, ?, ?, ?)',[IdClases, IdUser, Alta, NombreClase, DescClase])
     res.send({ rows })
 }
 
 export const deleteClase = async (req, res) => {
 
-    const [result] = await pool.query('DELETE FROM clases where IdClase = ?', [req.params.id])
+    const [result] = await pool.query('DELETE FROM clases where IdClases = ?', [req.params.id])
 
     if(result.affectedRows <= 0) return res.status(404).json({
         message: 'Valor no entontrado'
@@ -38,14 +38,14 @@ export const updateClase = async (req, res) => {
     const{ IdUser, Alta, NombreClase, DescClase} = req.body
     
     const [result] = await pool.query(
-        'UPDATE clase SET IdUser = IFNULL(?, IdUser), Alta = IFNULL(?, Alta), NombreClase = IFNULL(?, NombreClase), DescClase = IFNULL(?, DescClase) Where IdClase = ?',[IdUser, Alta, NombreClase, DescClase, id]
+        'UPDATE clase SET IdUser = IFNULL(?, IdUser), Alta = IFNULL(?, Alta), NombreClase = IFNULL(?, NombreClase), DescClase = IFNULL(?, DescClase) Where IdClases = ?',[IdUser, Alta, NombreClase, DescClase, id]
     )
 
     if(result.affectedRows === 0) return res.status(404).json({
         message: 'Valor no encontrado'
     })
 
-    const [rows] = await pool.query('SELECT * FROM clases WHERE IdClase = ?', [id])
+    const [rows] = await pool.query('SELECT * FROM clases WHERE IdClases = ?', [id])
 
     res.json(rows[0])
 }

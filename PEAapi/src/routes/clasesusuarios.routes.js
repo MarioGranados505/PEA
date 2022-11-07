@@ -3,14 +3,14 @@ import {getClasesusuarios, createClasesusario, updateClaseusuario, deleteClaseus
 
 const router = Router()
 
-router.get('/clases', getClasesusuarios)
+router.get('/clasesusuarios', getClasesusuarios)
 
-router.get('/clases/:id', getClasesusuario)
+router.get('/clasesusuarios/:id', getClasesusuario)
 
-router.post('/clases', createClasesusario)
+router.post('/clasesusuarios', createClasesusario)
 
-router.patch('/clases/:id', updateClaseusuario)
+router.patch('/clasesusuarios/:id', updateClaseusuario)
 
-router.delete('/clases/:id', deleteClaseusuario)
+router.delete('/clasesusuarios/:id', deleteClaseusuario)
 
 export default router
