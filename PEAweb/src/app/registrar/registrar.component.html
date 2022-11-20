@@ -1,24 +1,45 @@
-<div>
-    <form>
-        <div>
-            <input type="nombre" name="nombre" placeholder="Nombre">
-        </div>
+<ul class="BarraNavegacion">
+    <li class="ListadoNavegacion">
+        <a class="ActivadoNavegacion" href="#">PEA</a>
+    </li>
 
-        <div>
-            <input type="apellidos" name="apellidos" placeholder="Apellidos">
-        </div>
+    <li class="ListadoNavegacion" style="float:right">
+        <a class="LinkNavegacion" href="/login">Iniciar Sesion</a>
+    </li>
+</ul>
 
-        <div>
-            <input type="email" name="email" placeholder="Email">
-        </div>
-
-        <div>
-            <input type="password" name="password" placeholder="Password">
-        </div>
-
-        <div>
-            <button type="Submit">Registrar</button>
-        </div>
-
-    </form>
+<div class="contenedorCentro">
+    <div class="loginposition">
+        <form class="registerform">
+            <div class="logindiv">
+                <h2 class="loginp" >Bienvenido</h2>
+                <p class="loginp">Para empezar crea tu cuenta</p>
+            </div>
+            <div class="logindiv">
+                <input class="logininput" type="nombre" name="nombre" placeholder="Nombre">
+            </div>
+    
+            <div class="logindiv">
+                <input class="logininput" type="apellidos" name="apellidos" placeholder="Apellidos">
+            </div>
+    
+            <div class="logindiv">
+                <input class="logininput" type="email" name="email" placeholder="Email">
+            </div>
+    
+            <div class="logindiv">
+                <input class="logininput" type="password" name="password" placeholder="Password">
+            </div>
+    
+            <div class="logindiv">
+                <button class="loginbutton" type="Submit">Registrar</button>
+            </div>
+    
+            <div class="logindiv">
+                <p class="loginp">¿Ya eres usuario? <a href="/login">ingresa</a></p>
+            </div>
+    
+        </form>
+    </div>
 </div>
+

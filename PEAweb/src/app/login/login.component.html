@@ -1,18 +1,32 @@
-<div>
-    <form>
+<ul class="BarraNavegacion">
+    <li class="ListadoNavegacion">
+        <a class="ActivadoNavegacion" href="#">PEA</a>
+    </li>
 
-        <div>
-            <input type="email" name="email" placeholder="Email">
-        </div>
+</ul>
 
-        <div>
-            <input type="password" name="password" placeholder="Password">
-        </div>
-
-        <div>
-            <button type="submit" (click)="IrPaginaPrincipal()">Iniciar Sesion</button>
-            <button (click)="IrRegistrar()">Registrate</button>
-        </div>
-
-    </form>
+<div class="contenedorCentro">
+    <div class="loginposition">
+        <form class="loginform">
+            <div class="logindiv">
+                <h2 class="loginp">Inicia Sesion</h2>
+            </div>
+            
+            <div class="logindiv">
+                <input class="logininput" type="email" name="email" placeholder="Email">
+            </div>
+    
+            <div class="logindiv">
+                <input class="logininput" type="password" name="password" placeholder="Password">
+            </div>
+    
+            <div class="logindiv">
+                <button class="loginbutton" type="submit" (click)="IrPaginaPrincipal()">Iniciar Sesion</button>
+            </div>
+    
+            <div class="logindiv">
+                <p class="loginp">¿Aun sin cuenta? <a href="/registrar">Crea tu cuenta</a></p>
+            </div>
+        </form>
+    </div>
 </div>

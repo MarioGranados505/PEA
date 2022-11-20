@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+/* Barra de navegacion */
+.BarraNavegacion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.ListadoNavegacion {
+    float: left;
+}
+  
+.ListadoNavegacion .LinkNavegacion {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  /* Change the link color to #111 (black) on hover */
+.ListadoNavegacion .LinkNavegacion:hover {
+    background-color: #111;
+}
+
+.ActivadoNavegacion {
+    background-color: #111;
+}
+
+.ActivadoNavegacion {
+    background-color: #0452aa;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.usericon{
+    width: 5%;
+    padding: 30px;
+    
+
+    
+}
+
+/* universal */
+* {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
+
+/*css login */
+.loginform{
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 350px;
+    padding: 20px;
+    width: 320px;
+}
+
+.registerform{
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 450px;
+    padding: 20px;
+    width: 320px;
+}
+
+.logininput {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.logindiv {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.contenedorCentro{
+    position: relative;
+}
+
+.loginposition{
+    position: absolute;
+    margin: 25px 0 0 25%;
+}
+
+.loginp{
+    text-align: center;
+}
+
+.loginbutton{
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* bienvenida */
+.presentacion {
+    background-size: 100%;
+    size-adjust: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
