@@ -22,6 +22,9 @@
 .ListadoNavegacion .LinkNavegacion:hover {
     background-color: #111;
 }
+.ActivadoNavegacion:hover{
+    background-color: #111;
+}
 
 .ActivadoNavegacion {
     background-color: #111;
@@ -36,12 +39,9 @@
     text-decoration: none;
 }
 
-.usericon{
-    width: 5%;
-    padding: 30px;
-    
-
-    
+.NavIcon{
+    width: 15px;
+    height: 15px;
 }
 
 /* universal */

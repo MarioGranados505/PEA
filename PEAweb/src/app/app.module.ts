@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { QuienessomosComponent } from './quienessomos/quienessomos.component';
 import { PaginacursoComponent } from './paginacurso/paginacurso.component';
+import { PaginaclasesComponent } from './paginaclases/paginaclases.component';
 
 const appRoutes:Routes=[
 
@@ -19,8 +20,9 @@ const appRoutes:Routes=[
   {path:'registrar', component:RegistrarComponent},
   {path:'paginaprincipal', component:PaginaPrincipalComponent},
   {path:'configuracion', component:ConfiguracionComponent},
-  {path:'quienessomos', component:QuienessomosComponent}
-
+  {path:'quienessomos', component:QuienessomosComponent},
+  {path:'paginacurso',component:PaginacursoComponent},
+  {path:'paginaclases',component:PaginaclasesComponent}
 ];
 
 @NgModule({
@@ -32,7 +34,8 @@ const appRoutes:Routes=[
     PaginaPrincipalComponent,
     ConfiguracionComponent,
     QuienessomosComponent,
-    PaginacursoComponent
+    PaginacursoComponent,
+    PaginaclasesComponent
 
   ],
   imports: [
