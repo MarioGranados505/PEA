@@ -12,8 +12,17 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
 import { QuienessomosComponent } from './quienessomos/quienessomos.component';
 import { PaginacursoComponent } from './paginacurso/paginacurso.component';
 import { PaginaclasesComponent } from './paginaclases/paginaclases.component';
+<<<<<<< Updated upstream
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
+=======
+import { PaginaclasseComponent } from './paginaclasse/paginaclasse.component';
+import { CursonombreComponent } from './cursonombre/cursonombre.component';
+import { CursoimagenComponent } from './cursoimagen/cursoimagen.component';
+import { CursomaestroComponent } from './cursomaestro/cursomaestro.component';
+import { CursoporcientoComponent } from './cursoporciento/cursoporciento.component';
+import { CursoslistaComponent } from './cursoslista/cursoslista.component';
+>>>>>>> Stashed changes
 
 const appRoutes:Routes=[
 
@@ -38,8 +47,17 @@ const appRoutes:Routes=[
     QuienessomosComponent,
     PaginacursoComponent,
     PaginaclasesComponent,
+<<<<<<< Updated upstream
     BarraNavegacionComponent,
     MenuUsuarioComponent
+=======
+    PaginaclasseComponent,
+    CursonombreComponent,
+    CursoimagenComponent,
+    CursomaestroComponent,
+    CursoporcientoComponent,
+    CursoslistaComponent
+>>>>>>> Stashed changes
 
   ],
   imports: [
