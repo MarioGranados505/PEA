@@ -12,6 +12,8 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
 import { QuienessomosComponent } from './quienessomos/quienessomos.component';
 import { PaginacursoComponent } from './paginacurso/paginacurso.component';
 import { PaginaclasesComponent } from './paginaclases/paginaclases.component';
+import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
+import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 
 const appRoutes:Routes=[
 
@@ -35,7 +37,9 @@ const appRoutes:Routes=[
     ConfiguracionComponent,
     QuienessomosComponent,
     PaginacursoComponent,
-    PaginaclasesComponent
+    PaginaclasesComponent,
+    BarraNavegacionComponent,
+    MenuUsuarioComponent
 
   ],
   imports: [

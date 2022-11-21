@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaclasesComponent implements OnInit {
 
+  UserMenu(): void{
+    document.getElementById("Dropdown")?.classList.toggle("show")
+  }
+
   constructor() { }
 
   ngOnInit(): void {

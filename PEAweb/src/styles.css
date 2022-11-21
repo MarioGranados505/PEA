@@ -44,6 +44,19 @@
     height: 15px;
 }
 
+.BotonNavegacion{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid #333;
+}
+
+.BotonNavegacion:hover{
+    background-color: #111;
+}
+
 /* universal */
 * {
     padding: 0;
@@ -128,3 +141,37 @@
     background-attachment: fixed;
     width: 100%;
 }
+
+/* Menu Usuario */
+.MenuUsuario{
+    list-style-type: none;
+    background-color: #333;
+    height: 110px;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+.ListaMenu{
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.LinkMenu{
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ListaMenu:hover{
+    background-color: #111;
+}
+
