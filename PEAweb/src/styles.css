@@ -142,7 +142,6 @@
     width: 100%;
 }
 
-<<<<<<< Updated upstream
 /* Menu Usuario */
 .MenuUsuario{
     list-style-type: none;
@@ -176,7 +175,6 @@
     background-color: #111;
 }
 
-=======
 /* componentes cursos */
 .tarjetamayor{
     background-color: #0452aa;
@@ -197,4 +195,4 @@
     position: absolute;
     margin: 0 0 0 50%;
 }
->>>>>>> Stashed changes
+
