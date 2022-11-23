@@ -3,23 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrarComponent } from './registrar/registrar.component';
-import { BienvenidaComponent } from './bienvenida/bienvenida.component';
-import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { LoginComponent } from './paginacion/login/login.component';
+import { RegistrarComponent } from './paginacion/registrar/registrar.component';
+import { BienvenidaComponent } from './paginacion/bienvenida/bienvenida.component';
+import { PaginaPrincipalComponent } from './paginacion/pagina-principal/pagina-principal.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ConfiguracionComponent } from './configuracion/configuracion.component';
-import { QuienessomosComponent } from './quienessomos/quienessomos.component';
-import { PaginacursoComponent } from './paginacurso/paginacurso.component';
-import { PaginaclasesComponent } from './paginaclases/paginaclases.component';
-import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
-import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
-import { PaginaclasseComponent } from './paginaclasse/paginaclasse.component';
-import { CursonombreComponent } from './cursonombre/cursonombre.component';
-import { CursoimagenComponent } from './cursoimagen/cursoimagen.component';
-import { CursomaestroComponent } from './cursomaestro/cursomaestro.component';
-import { CursoporcientoComponent } from './cursoporciento/cursoporciento.component';
-import { CursoslistaComponent } from './cursoslista/cursoslista.component';
+import { ConfiguracionComponent } from './paginacion/configuracion/configuracion.component';
+import { QuienessomosComponent } from './paginacion/quienessomos/quienessomos.component';
+import { PaginacursoComponent } from './paginacion/paginacurso/paginacurso.component';
+import { PaginaclasesComponent } from './paginacion/paginaclases/paginaclases.component';
+import { BarraNavegacionComponent } from './navbar/barra-navegacion/barra-navegacion.component';
+import { MenuUsuarioComponent } from './navbar/menu-usuario/menu-usuario.component';
+import { CursoslistaComponent } from './tarjetacursos/cursoslista/cursoslista.component';
+import { CursoComponent } from './tarjetacursos/curso/curso.component';
 
 const appRoutes:Routes=[
 
@@ -46,12 +42,8 @@ const appRoutes:Routes=[
     PaginaclasesComponent,
     BarraNavegacionComponent,
     MenuUsuarioComponent,
-    PaginaclasseComponent,
-    CursonombreComponent,
-    CursoimagenComponent,
-    CursomaestroComponent,
-    CursoporcientoComponent,
-    CursoslistaComponent
+    CursoslistaComponent,
+    CursoComponent
 
   ],
   imports: [

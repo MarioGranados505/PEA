@@ -68,6 +68,14 @@
   }
 
 /*css login */
+.contenedorCentro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 40px;
+}
+
 .loginform{
     background-color: #f1f1f1;
     border-radius: 20px;
@@ -103,16 +111,12 @@
     margin-bottom: 20px;
     justify-content: center;
 }
-
-.contenedorCentro{
-    position: relative;
-}
-
+/*
 .loginposition{
     position: absolute;
     margin: 25px 0 0 25%;
 }
-
+*/
 .loginp{
     text-align: center;
 }
@@ -176,23 +180,33 @@
 }
 
 /* componentes cursos */
-.tarjetamayor{
+
+.curso{
     background-color: #0452aa;
     border-radius: 10px;
-    box-sizing: border-box;
     height: 350px;
-    padding: 20px;
     width: 320px;
-    position: absolute;
-    margin: 10px 0 0 10%;
+    padding: 20px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-.imagentarjeta{
-    width: 20%;
+.contenidocurso{
+    transform: translate(12.5%, 0px);
 }
 
-.mover{
-    position: absolute;
-    margin: 0 0 0 50%;
+.imagencurso{
+    width: 75px;
+    height: 75px;
+}
+
+.divcurso{
+    justify-content: center;
+    height: 50px;
+}
+
+.acurso, .pcurso{
+    color: white
 }
 
