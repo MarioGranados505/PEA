@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { listausuarios } from '../../modelos/usuarios.model'
+import { UsuariosService } from '../../servicios/usuarios.service'
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +10,15 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  usuario: listausuarios={
+    Idusuario:0,
+    Nombre:"",
+    Apellido:"",
+    Correo:"",
+    Password:""
+  };
+
+  constructor(private UsuariosService:UsuariosService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -18,8 +28,24 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['registrar']);
   }
 
+  
+
   IrPaginaPrincipal(){
-    this.router.navigate(['paginaprincipal'])
+    console.log(this.usuario)
+    this.UsuariosService.postUsuarioLogin(this.usuario).subscribe(
+      res=>{
+        console.log(res);
+        this.router.navigate(['paginaprincipal'])
+        this.grabarusuario_localstorage(res)
+      },
+      err => console.log(err)
+    )
+    
   }
+
+  grabarusuario_localstorage(usuario:listausuarios){
+    localStorage.setItem( "usuario", JSON.stringify(usuario));
+  }
+  
 
 }

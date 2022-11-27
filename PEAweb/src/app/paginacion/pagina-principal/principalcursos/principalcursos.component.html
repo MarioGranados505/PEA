@@ -1,0 +1,28 @@
+<div class='seccioncursocentrado'>
+    <div class="curso" *ngFor="let curso of ListarCursos" >
+        <div class="divimagen">
+            <img class="imagencurso" src=" {{curso.imagen}}">
+        </div>
+    
+        <div class="divcurso">
+            <h2 class="pcurso">{{curso.nombre}} </h2>
+        </div>
+    
+        <div class="divcurso">
+            <p class="pcurso"> Por: {{curso.maestro}} </p>
+        </div>
+    
+        <div class="divcurso">
+            <p class="pcurso"> {{curso.des}}</p>
+        </div>
+    
+        <div>
+            <a style="float: right;" (click)="agregarcurso(curso)" ><img class="imgagregar" src="/assets/images/plus.png"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

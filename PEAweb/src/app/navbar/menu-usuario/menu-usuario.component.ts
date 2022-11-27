@@ -12,4 +12,8 @@ export class MenuUsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  BorrarSesion(){
+    localStorage.clear();
+  }
+
 }

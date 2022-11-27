@@ -1,0 +1,20 @@
+<div class='seccioncursocentrado'>
+    <div class="curso" *ngFor="let curso of ListarCursos" >
+        <div class="divimagen">
+            <img class="imagencurso" src=" {{curso.imagen}}">
+        </div>
+    
+        <div class="divcurso">
+            <h2><a (click)="guardarcurso(curso)" href="paginacurso" class="pcurso">{{curso.nombre}} </a></h2>
+        </div>
+    
+        <div class="divcurso">
+            <p class="pcurso"> Por: {{curso.maestro}} </p>
+        </div>
+    
+        <div class="divcurso">
+            <p class="pcurso"> {{curso.des}}</p>
+        </div>
+    
+    </div>
+</div>

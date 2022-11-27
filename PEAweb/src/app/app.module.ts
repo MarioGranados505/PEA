@@ -3,19 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+
 import { LoginComponent } from './paginacion/login/login.component';
 import { RegistrarComponent } from './paginacion/registrar/registrar.component';
 import { BienvenidaComponent } from './paginacion/bienvenida/bienvenida.component';
 import { PaginaPrincipalComponent } from './paginacion/pagina-principal/pagina-principal.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ConfiguracionComponent } from './paginacion/configuracion/configuracion.component';
-import { QuienessomosComponent } from './paginacion/quienessomos/quienessomos.component';
+
 import { PaginacursoComponent } from './paginacion/paginacurso/paginacurso.component';
-import { PaginaclasesComponent } from './paginacion/paginaclases/paginaclases.component';
+import { PaginatuscursosComponent } from './paginacion/paginatuscursos/paginatuscursos.component';
 import { BarraNavegacionComponent } from './navbar/barra-navegacion/barra-navegacion.component';
 import { MenuUsuarioComponent } from './navbar/menu-usuario/menu-usuario.component';
-import { CursoslistaComponent } from './tarjetacursos/cursoslista/cursoslista.component';
-import { CursoComponent } from './tarjetacursos/curso/curso.component';
+import { SeccioncursoComponent } from './paginacion/paginacurso/seccioncurso/seccioncurso.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PrincipalcursosComponent } from './paginacion/pagina-principal/principalcursos/principalcursos.component';
+import { TuscursosComponent } from './paginacion/paginatuscursos/tuscursos/tuscursos.component';
 
 const appRoutes:Routes=[
 
@@ -23,10 +27,8 @@ const appRoutes:Routes=[
   {path:'login', component:LoginComponent},
   {path:'registrar', component:RegistrarComponent},
   {path:'paginaprincipal', component:PaginaPrincipalComponent},
-  {path:'configuracion', component:ConfiguracionComponent},
-  {path:'quienessomos', component:QuienessomosComponent},
   {path:'paginacurso',component:PaginacursoComponent},
-  {path:'paginaclases',component:PaginaclasesComponent}
+  {path:'paginatuscursos',component:PaginatuscursosComponent}
 ];
 
 @NgModule({
@@ -36,20 +38,21 @@ const appRoutes:Routes=[
     RegistrarComponent,
     BienvenidaComponent,
     PaginaPrincipalComponent,
-    ConfiguracionComponent,
-    QuienessomosComponent,
     PaginacursoComponent,
-    PaginaclasesComponent,
+    PaginatuscursosComponent,
     BarraNavegacionComponent,
     MenuUsuarioComponent,
-    CursoslistaComponent,
-    CursoComponent
-
+    SeccioncursoComponent,
+    PrincipalcursosComponent,
+    TuscursosComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

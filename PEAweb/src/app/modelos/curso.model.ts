@@ -1,17 +1,13 @@
-export class curso{
+export interface listacurso{
+    idcurso?:number,
+    nombre?:string,
+    maestro?:string,
+    des?:string,
+    imagen?:string
+}
 
-    constructor(
-        
-        public nombre: string,
-
-        public maestro: string,
-
-        public imagen: string,
-
-        public porciento: string
-
-    ){
-
-    }
-
+export interface unirsecurso{
+    id?:number,
+    idcurso?:number,
+    idusuario?:number,
 }

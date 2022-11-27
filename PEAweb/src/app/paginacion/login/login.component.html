@@ -12,15 +12,15 @@
             </div>
             
             <div class="logindiv">
-                <input class="logininput" type="email" name="email" placeholder="Email">
+                <input [(ngModel)]="usuario.Correo" class="logininput" type="email" name="email" placeholder="Email">
             </div>
     
             <div class="logindiv">
-                <input class="logininput" type="password" name="password" placeholder="Password">
+                <input [(ngModel)]="usuario.Password" class="logininput" type="password" name="password" placeholder="Password">
             </div>
     
             <div class="logindiv">
-                <button class="loginbutton" type="submit" (click)="IrPaginaPrincipal()">Iniciar Sesion</button>
+                <button (click)="IrPaginaPrincipal()" class="loginbutton" type="submit" >Iniciar Sesion</button>
             </div>
     
             <div class="logindiv">

@@ -15,24 +15,25 @@
                 <h2 class="loginp" >Bienvenido</h2>
                 <p class="loginp">Para empezar crea tu cuenta</p>
             </div>
+
             <div class="logindiv">
-                <input class="logininput" type="nombre" name="nombre" placeholder="Nombre">
+                <input [(ngModel)]="usuario.Nombre" class="logininput" type="text" name="nombre" placeholder="Nombre">
             </div>
     
             <div class="logindiv">
-                <input class="logininput" type="apellidos" name="apellidos" placeholder="Apellidos">
+                <input [(ngModel)]="usuario.Apellido" class="logininput" type="text" name="apellidos" placeholder="Apellidos">
             </div>
     
             <div class="logindiv">
-                <input class="logininput" type="email" name="email" placeholder="Email">
+                <input [(ngModel)]="usuario.Correo" class="logininput" type="email" name="email" placeholder="Email">
             </div>
     
             <div class="logindiv">
-                <input class="logininput" type="password" name="password" placeholder="Password">
+                <input [(ngModel)]="usuario.Password" class="logininput" type="password" name="password" placeholder="Password">
             </div>
     
             <div class="logindiv">
-                <button class="loginbutton" type="Submit">Registrar</button>
+                <button (click)="agregarusuario()" class="loginbutton" type="Submit">Registrar</button>
             </div>
     
             <div class="logindiv">
@@ -42,4 +43,6 @@
         </form>
     </div>
 </div>
+
+
 

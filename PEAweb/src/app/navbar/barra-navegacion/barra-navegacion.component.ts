@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { listausuarios } from '../../modelos/usuarios.model';
 
 @Component({
   selector: 'app-barra-navegacion',
@@ -9,13 +10,29 @@ export class BarraNavegacionComponent implements OnInit {
   
   FlagMenu: boolean = false;
 
-  UserMenu():void{
-    this.FlagMenu = !this.FlagMenu;
-  }
+  datousuario: listausuarios={}
 
   constructor() { }
 
   ngOnInit(): void {
+    this.obtenerdatousuario()
+  }
+
+  UserMenu():void{
+    this.FlagMenu = !this.FlagMenu;
+  }
+
+  BorrarSesion(){
+    localStorage.clear();
+  }
+
+  obtenerdatousuario()
+  { 
+    const json: string = localStorage.getItem("usuario") as string;
+    const obj = JSON.parse(json)
+    this.datousuario = obj
+
+    console.log(this.datousuario);
   }
 
 }

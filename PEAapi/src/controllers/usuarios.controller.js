@@ -7,7 +7,7 @@ export const getUsuarios = async (req, res) => {
 }
 
 export const getUsuario = async (req, res) => {
-    const [rows] = await pool.query('Select * FROM usuarios WHERE IdUsuario = ?', [req.params.id])
+    const [rows] = await pool.query('Select * FROM usuarios WHERE Idusuario = ?', [req.params.id])
 
     if (rows.length <= 0) return res.status(404).json({
         message: 'Valor no encontrado'
@@ -16,15 +16,25 @@ export const getUsuario = async (req, res) => {
     res.json(rows[0])
 }
 
+export const getUsuarioLogin = async (req, res) => {
+    const {Correo, Password} = req.body
+    const [rows] = await pool.query('Select * from usuarios where Correo = ? and Password= ? ', [Correo, Password])
+    if (rows.length <= 0) return res.status(404).json({
+        message: 'Valor no encontrado'
+    })
+
+    res.json(rows[0])
+}
+
 export const createUsuario = async(req, res) => {
-    const {IdUsuario, Nombre, Apellido, Correo, Password} = req.body
-    const [rows] = await pool.query('INSERT INTO usuarios (IdUsuario, Nombre, Apellido, Correo, Password) VALUES (?, ?, ?, ?, ?)',[IdUsuario, Nombre, Apellido, Correo, Password])
+    const {Nombre, Apellido, Correo, Password} = req.body
+    const [rows] = await pool.query('INSERT INTO usuarios (Nombre, Apellido, Correo, Password) VALUES (?, ?, ?, ?)',[Nombre, Apellido, Correo, Password])
     res.send({ rows })
 }
 
 export const deleteUsuario = async (req, res) => {
 
-    const [result] = await pool.query('DELETE FROM usuarios where IdUsuario = ?', [req.params.id])
+    const [result] = await pool.query('DELETE FROM usuarios where Idusuario = ?', [req.params.id])
 
     if(result.affectedRows <= 0) return res.status(404).json({
         message: 'Valor no entontrado'
@@ -38,14 +48,14 @@ export const updateUsuario = async (req, res) => {
     const{ Nombre, Apellido, Correo, Password} = req.body
     
     const [result] = await pool.query(
-        'UPDATE usuarios SET Nombre = IFNULL(?, Nombre), Apellido = IFNULL(?, Apellido), Correo = IFNULL(?, Correo), Password = IFNULL(?, Password) Where IdUsuario = ?',[Nombre, Apellido, Correo, Password, id]
+        'UPDATE usuarios SET Nombre = IFNULL(?, Nombre), Apellido = IFNULL(?, Apellido), Correo = IFNULL(?, Correo), Password = IFNULL(?, Password) Where Idusuario = ?',[Nombre, Apellido, Correo, Password, id]
     )
 
     if(result.affectedRows === 0) return res.status(404).json({
         message: 'Valor no encontrado'
     })
 
-    const [rows] = await pool.query('SELECT * FROM Usuarios WHERE IdUsuario = ?', [id])
+    const [rows] = await pool.query('SELECT * FROM Usuarios WHERE Idusuario = ?', [id])
 
     res.json(rows[0])
 }

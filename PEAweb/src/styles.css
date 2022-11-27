@@ -99,7 +99,7 @@
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
-    color: #eee;
+    color: black;
     font-size: 18px;
     height: 100%;
     outline: 0;
@@ -180,20 +180,23 @@
 }
 
 /* componentes cursos */
-
 .curso{
     background-color: #0452aa;
     border-radius: 10px;
     height: 350px;
     width: 320px;
     padding: 20px;
-    display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 20px;
 }
 
 .contenidocurso{
-    transform: translate(12.5%, 0px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .imagencurso{
@@ -201,12 +204,68 @@
     height: 75px;
 }
 
+.imgagregar{
+    width: 30px;
+    width: 30px;
+}
+
 .divcurso{
     justify-content: center;
-    height: 50px;
+    height: 70px;
 }
 
 .acurso, .pcurso{
     color: white
 }
 
+/*seccioncurso*/
+.seccioncurso{
+    background-color: rgb(41, 41, 41);
+    border-radius: 5px;
+    height: 450px;
+    width: 900px;
+    padding: 20px;
+}
+
+.divseccioncursocentrado{
+    justify-content: center;
+    height: 50px;
+}
+
+.h3seccioncurso{
+    text-align: center;
+}
+
+.imgseccioncurso{
+    height: 100px;
+}
+
+.divseccioncursoimg{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.h2seccioncurso, .h3seccioncurso, .pseccioncurso{
+    color: white;
+}
+
+.pseccioncurso{
+    text-align: justify;
+}
+
+.seccioncursocentrado{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+    height: 100%;
+    padding: 0;
+    margin: 10px;
+}
+
+.divvideo{
+    display: flex;
+    justify-content: center;
+}
