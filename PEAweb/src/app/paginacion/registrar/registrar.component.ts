@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../servicios/usuarios.service'
 import { listausuarios } from '../../modelos/usuarios.model'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registrar',
@@ -39,8 +40,32 @@ export class RegistrarComponent implements OnInit {
   agregarusuario()
   {
     console.log(this.usuario)
-    this.UsuariosService.addUsuario(this.usuario).subscribe()
-    this.router.navigate([''])
+    this.UsuariosService.addUsuario(this.usuario).subscribe(
+      res =>{
+        this.showRegisterCheck()
+        this.router.navigate([''])
+      },
+      err =>{
+        this.showErrorRegister()
+      }
+    )
+   
+    
+  }
+
+  showErrorRegister(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Un error a ocurrido'
+    })
+  }
+
+  showRegisterCheck(){
+    Swal.fire({
+      icon: 'success',
+      title: 'Se a registrado exitosamente'
+    })
   }
 
 }

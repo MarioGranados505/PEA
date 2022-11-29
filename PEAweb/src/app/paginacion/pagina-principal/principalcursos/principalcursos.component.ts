@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CursosService } from '../../../servicios/cursos.service'
 import { listacurso, unirsecurso } from '../../../modelos/curso.model'
 import {listausuarios } from '../../../modelos/usuarios.model'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-principalcursos',
@@ -37,9 +38,24 @@ export class PrincipalcursosComponent implements OnInit {
   agregarcurso(curso:listacurso){
     console.log("click")
     this.obteneridusuario()
+
     this.cursoguardar.idcurso = curso.idcurso;
     this.cursoguardar.idusuario = this.datosusuario.Idusuario
-    this.CursosService.addUsuarioCurso(this.cursoguardar).subscribe()
+
+    this.CursosService.getListaUsuarioCurso(this.cursoguardar).subscribe(
+      res=>{
+        console.log(res)
+        console.log("estas dentro de este curso")
+        this.showErrorUnirse()
+      },
+      err => {
+        console.log(err)
+        console.log("Te haz unido a este curso")
+        this.CursosService.addUsuarioCurso(this.cursoguardar).subscribe()
+        this.showCheckUnirse()
+      }
+    )
+
 
   }
 
@@ -50,6 +66,21 @@ export class PrincipalcursosComponent implements OnInit {
     this.datosusuario = obj
 
     console.log(this.datosusuario);
+  }
+
+  showErrorUnirse(){
+    Swal.fire({
+      icon: 'warning',
+      title: 'Ya te haz unido a este curso'
+    })
+  }
+
+  showCheckUnirse(){
+    Swal.fire({
+      icon: 'success',
+      title: 'Te haz unido exitosamente al curso',
+      footer: '<a href="paginatuscursos">Ve tu nuevo curso en tus cursos</a>'
+    })
   }
 
 }

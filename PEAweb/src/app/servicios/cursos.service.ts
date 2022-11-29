@@ -37,5 +37,14 @@ export class CursosService {
     return this.http.post(this.urlBase+'usuarioscursos/', usuariounir)
   }
 
+  getListaUsuarioCurso(usuariocurso:unirsecurso){
+    return this.http.post(this.urlBase+'usuariocurso/', usuariocurso)
+  }
+
+  deleteCursousuario(id:number)
+  {
+    return this.http.delete(this.urlBase+'usuarioscursos/'+id);
+  }
+
 
 }
