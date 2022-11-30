@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrincipalcursosComponent } from './paginacion/pagina-principal/principalcursos/principalcursos.component';
 import { TuscursosComponent } from './paginacion/paginatuscursos/tuscursos/tuscursos.component';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 const appRoutes:Routes=[
 
   {path:'', component:BienvenidaComponent},
@@ -54,7 +56,7 @@ const appRoutes:Routes=[
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

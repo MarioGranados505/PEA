@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
       icon: 'error',
       title: 'Oops...',
       text: 'Tu correo o contraseña son invalidas',
-      footer: '<a href="registrar">¿Quieres registrarte?</a>'
+      footer: '<a href="#/registrar">¿Quieres registrarte?</a>'
     })
   }
   
